@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateArm3.Arm3sTable extends Migration
+class CreateArm4sTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,11 @@ class CreateArm3.Arm3sTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('_arm4s', function (Blueprint $table) {
+            $table->id();
+            $table->text("Direction");
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +27,6 @@ class CreateArm3.Arm3sTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('_arm4s');
     }
 }

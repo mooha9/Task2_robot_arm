@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateArm3sTable extends Migration
+class CreateArm4Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,13 @@ class CreateArm3sTable extends Migration
      */
     public function up()
     {
-        Schema::create('_arm3s', function (Blueprint $table) {
+        Schema::create('_arm4', function (Blueprint $table) {
             $table->id();
-            $table->integer("Engin1");
-            $table->integer("Engin2");
-            $table->integer("Engin3");
-            $table->integer("Engin4");
-            $table->integer("Engin5");
-            $table->integer("Engin6"); 
-           
+            $table->text("Direction");
+
+ 
             $table->timestamps();
-        });
+       });
     }
 
     /**
@@ -33,6 +29,6 @@ class CreateArm3sTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_arm3s');
+        Schema::dropIfExists('_arm4');
     }
 }

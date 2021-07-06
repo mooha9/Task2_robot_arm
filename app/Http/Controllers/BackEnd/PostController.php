@@ -4,7 +4,7 @@ namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\_arm3;
+use App\Models\_arm4;
 class PostController extends Controller
 {
     /**
@@ -14,9 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-
-        $arms =_arm3::latest()->limit(1)->get();
+        $arms =_arm4::latest()->limit(1)->get();
        return view('BackEnd.posts.index',compact('arms'));
+
     }
 
     /**
@@ -26,11 +26,15 @@ class PostController extends Controller
      */
     public function create()
     {
-
-        
        return view('BackEnd.posts.create');
+      
     }
 
+    public function create1()
+    {
+       return view('BackEnd.posts.create1');
+      
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -40,16 +44,16 @@ class PostController extends Controller
     public function store(Request $request)
     {
             // dd($request->all());
-            _arm3::create([
+            _arm4::create([
 
                 "id"=>$request->id,
-                "Engin1"=>$request->Engin1, 
-                "Engin2"=>$request->Engin2,
-                "Engin3"=>$request->Engin3,
-                "Engin4"=>$request->Engin4, 
-                "Engin5"=>$request->Engin5,
-                "Engin6"=>$request->Engin6,
+                "Direction"=>$request->Direction, 
+        
+              
             ]);
+            $arms =_arm4::latest()->limit(1)->get();
+            return view('BackEnd.posts.index',compact('arms'));
+            return view('BackEnd.posts.index');
             return redirect()->back();
    
     }

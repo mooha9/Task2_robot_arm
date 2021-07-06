@@ -34,4 +34,10 @@ Route::namespace('BackEnd')-> group(function() {
     Route::POST('/save/store',[PostController::class,'store'])->name('save.store');
 
     Route::get('/result',[PostController::class,'index'])->name('save.index');
+
+    Route::get('/save1',[PostController::class,'create1'])->name('save.create1');
+
+    Route::POST('/save/store1',[PostController::class,'store1'])->name('save.store1');
+
+    Route::get('/result1',[PostController::class,'index1'])->name('save.index1');
 });

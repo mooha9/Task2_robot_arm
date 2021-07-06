@@ -1,4 +1,4 @@
-@extends('FrontEnd.layouts.main')
+@extends('FrontEnd.layouts.main1')
 
 @section('content')
 <style>
@@ -65,21 +65,31 @@
     
     
     
-    <div class="row row-cols-2 row-cols-lg-1 g-2 g-lg-2"style="position:center; text-align: center; " >
+    <div class="row row-cols-1 row-cols-lg-7 g-2 g-lg-2"style="position:absolute; margin-left: 8%;" >
       <div class="col">
-        <div class="p-1 border bg-light"> ID :     {{$arm->id}} </div>
+        <div class="p-3 border bg-light"> ID :     {{$arm->id}} </div>
       </div>
       <div class="col">
-        <div class="p-1 border bg-light"> Last Move :     {{$arm->Direction}}</div>
+        <div class="p-3 border bg-light"> Engin 1 :     {{$arm->Engin1}}°</div>
       </div>
-     
-
+      <div class="col">
+        <div class="p-3 border bg-light"> Engin 2 :     {{$arm->Engin2}}°</div>
       </div>
-    
+      <div class="col">
+        <div class="p-3 border bg-light"> Engin 3 :     {{$arm->Engin3}}°</div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light"> Engin 4 :     {{$arm->Engin4}}°</div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light"> Engin 5 :     {{$arm->Engin5}}°</div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light"> Engin 6 :      {{$arm->Engin6}}°</div>
       </div>
       <br><br><br><br>
       <div class="row row-cols-1 row-cols-lg-2 g-2 g-lg-2" >
-      <form  action="{{route ('save.create')}}" >
+      <form  action="{{route ('save.create1')}}" >
         <button class="button2" >BACK</button>
       </form>
       <button class="button1" >START</button>
