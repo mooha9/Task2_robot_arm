@@ -6,7 +6,7 @@ So,
 Firstfull, 
 
 i create a webpage to control the arm by directions it was 5 button for every direction and stop button.
-the end of page there is a button to go to Engins contol .
+the end of page there is a button to go to Engins control .
 
 ![Screen Shot 2021-07-06 at 10 08 19 PM](https://user-images.githubusercontent.com/46851354/124915093-d2b72200-dff9-11eb-940b-9c6f126f7bd1.png)
 
